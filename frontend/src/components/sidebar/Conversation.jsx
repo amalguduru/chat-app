@@ -3,6 +3,7 @@ import useConversation from "../../zustand/useConversation";
 
 /* eslint-disable react/prop-types */
 const Conversation = ({ conversation, emoji, lastIndex }) => {
+  console.log(conversation);
   const { setSelectedConversation } = useConversation();
   const { onlineUsers } = useSocketContext();
   const isOnline = onlineUsers.includes(conversation._id);
