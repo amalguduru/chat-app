@@ -12,7 +12,7 @@ const useGetMessages = () => {
       setLoading(true);
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/messages/${selectedConversation._id}`,
+          `https://chat-app-3b1s.onrender.com/api/messages/${selectedConversation._id}`,
           { withCredentials: true }
         );
 

@@ -10,9 +10,12 @@ const useGetConversations = () => {
     const getConversations = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("http://localhost:5000/api/users", {
-          withCredentials: true,
-        });
+        const res = await axios.get(
+          "https://chat-app-3b1s.onrender.com/api/users",
+          {
+            withCredentials: true,
+          }
+        );
         setConversations(res.data);
       } catch (error) {
         if (error.response.data && error.response.data.error) {
